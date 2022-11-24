@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>My Budget App</title>
+</head>
+<body>
+    <div class="container">
+    <p id="error_msg"></p>
+    <div class="title">
+        <h1 class="title">
+        My Budget <a href="#"><i class="fa fa-money"></i></a>
+        </h1>
+    </div>
+
+    <h3>New Entry</h3>
+    <form id="form">
+        <div class="form-control">
+        <label for="number">Income</label>
+        <input
+            type="number"
+            id="number"
+            onfocus="this.value=''"
+            placeholder="Enter income..."
+            min="0"
+        />
+        </div>
+        <div class="form-control">
+            <label for="number">Age</label>
+            <input
+                type="number"
+                id="age"
+                onfocus="this.value=''"
+                placeholder="Enter age..."
+                min="0"
+            />
+        </div>
+        <div class="form-control">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="">--------</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div> 
+        <div class="form-control">
+            <label for="marital_status">Marital Status</label>
+            <select name="marital_status" id="marital_status">
+                <option value="">--------</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="widow/widower">Widow/Widower</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="number_of_dependents">Number of dependents</label>
+            <input
+                type="number"
+                id="number_of_dependents"
+                onfocus="this.value=''"
+                placeholder="Enter number of dependents..."
+                min="0"
+            />
+        </div>
+        <div class="form-control">
+            <label for="budget_categories">Budget Categories</label>
+            <select name="budget_categories" id="budget_categories">
+                <option value="">--------</option>
+                <option value="school_fees">School Fees</option>
+                <option value="Rent">Rent</option>
+                <option value="medical_bills">Medical Bills</option>
+                <option value="medical_bills">Groceries</option>
+                <option value="medical_bills">Travel Expenses</option>
+                <option value="medical_bills">Household Maintenance</option>
+                <option value="medical_bills">Toileteries</option>
+                <option value="medical_bills">Food Stuffs</option>
+                <option value="medical_bills">Pet Care</option>
+                <option value="medical_bills">Car Maintenance</option>
+            </select>
+        </div>
+        <div class="form-control">
+        <label for="amount">Amount(+/-) <br /> </label>
+        <input
+            type="number"
+            id="amount"
+            onfocus="this.value=''"
+            max="0"
+            placeholder="Enter value..."
+        />
+        </div>
+        <button class="btn">Add transaction</button>
+    </form>
+    <br />
+
+    <div class="income-expense">
+        <div class="bg-dark">
+        <h4>Inflow</h4>
+        <p class="income" id="income">$0.00</p>
+        </div>
+        <div class="bg-dark">
+        <h4>Outflow</h4>
+        <p class="expense" id="expense">$0.00</p>
+        </div>
+        <div class="bg-dark">
+        <h4>Balance</h4>
+        <p id="balance">$0.00</p>
+        </div>
+    </div>
+    <h3>History</h3>
+    <!-- Dynamic unordered list to display the various transactions -->
+    <ul id="list" class="list"></ul>
+    <footer>
+        &copy; Designed by
+        <a href="#">Olusola Afolayan</a>
+    </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
